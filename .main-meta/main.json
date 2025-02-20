@@ -4,13 +4,13 @@
    "content":{
       "metaDataVersion":"1.0.0",
       "name":"com.microchip.matlab.project.matlab-mclv48v300w-33ch512mp508-pmsm-foc-smo",
-      "version":"x.x.x",
-      "displayName":"xxxxxxxxxxxxxxx",
-      "projectName":"matlab-mclv48v300w-33ch512mp508-pmsm-foc-smo",
-      "shortDescription":"xxxxxxxxxxxxxxx",
+      "version":"1.0.0",
+      "displayName":"MATLAB-Simulink model for Sensorless FOC with flux weakening control using Sliding mode observer (SMO)",
+      "projectName":"matlab-mclv-48v-300w-dspic33ch512mp508-foc-smo",
+      "shortDescription":"MATLAB-Simulink model for Sensorless FOC with flux weakening control using Sliding mode observer (SMO) with MCLV-48V-300W Development Board and dsPIC33CH512MP508 MC DIM",
       "simulationTool":{
          "name":"MATLAB/Simulink",
-         "semverRange":">=2022"
+         "semverRange":">=2024"
       },
 	  "addonPackages":[
 				"MATLAB add on packages",
@@ -21,12 +21,12 @@
 				"Fixed-Point Designer"
       ],
       "compiler":{
-         "name":"XC16",
-         "semverRange":"^2.0.0"
+         "name":"XCDSC",
+         "semverRange":"^3.2.0"
       },
       "dfp":{
-         "name":"xxxxxxxxxxxxxxx",
-         "semverRange":">=x.x.x"
+         "name":"dsPIC33CH-MP_DFP",
+         "semverRange":">=1.15.378"
       },
       "device":{
          "metaDataVersion":"1.0.0",
@@ -34,13 +34,15 @@
          "content":{
             "metaDataVersion":"1.0.0",
             "category":"com.microchip.device",
-            "name":"xxxxxxxxxxxxxxx",
+            "name":"dsPIC33CH512MP508",
             "versionRange":"*"
          }
       },
       "keywords":[
-        "GPIO",
-		"UART"
+         "Motor Control",
+         "FOC",
+         "ADC",
+         "PWM"
       ]
    }
 }
