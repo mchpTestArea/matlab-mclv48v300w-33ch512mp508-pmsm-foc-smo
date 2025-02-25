@@ -1,16 +1,16 @@
 ![image](images/microchip_logo_white_red.png) 
-# MATLAB SIMULINK MODEL: MCLV-48V-300W Motor Control Development Board and dsPIC33CH512MP508 MC DIM Sensorless FOC with SMO and Field Weakening
+# MATLAB/Simulink Model for Sensorless FOC with SMO and Field Weakening: MCLV-48V-300W Motor Control Development Board and dsPIC33CH512MP508 MC DIM 
 
 ## 1. INTRODUCTION
-<p style='text-align: justify;'>
-This document describes the setup requirements for running the Sensorless FOC with field weakening algorithm and a Sliding Mode Observer (SMO), using MATLAB/Simulink and MCLV-48V-300W Motor Control Development Board with dsPIC33CH512MP508 Motor Control Dual In-line Module(DIM).</p>
-<p style='text-align: justify;'>
-The SMO implementation is referenced from AN1078 “Sensorless Field Oriented Control of a PMSM”.
+
+This document describes the setup requirements to drive a PMSM motor on the hardware platform 
+[EV18H47A](https://www.microchip.com/en-us/development-tool/EV18H47A) "MCLV-48V-300W Motor Control Development Board" and [EV76L31A](https://www.microchip.com/en-us/development-tool/EV76L31A) "dsPIC33CH512MP508 Motor Control Dual In-line Module(DIM)".</p>
+The MATLAB/Simulink model includes Sensorless Field Oriented Control (FOC) with Sliding Mode Observer (SMO) Estimator referenced from [AN1078](https://www.microchip.com/en-us/application-notes/an1078) “Sensorless Field Oriented Control of a PMSM”. It also includes field weakening algorithm to support extended speed operation. 
 </p>
 
 ## 2.	SUGGESTED DEMONSTRATION REQUIREMENTS
 ### 2.1 MATLAB Model Required for the Demonstration
--  MATLAB model can be downloaded as zip file.
+-  MATLAB/Simulink model can be downloaded as zip file ([link](https://github.com/microchip-pic-avr-solutions/matlab-mclv48v300w-33ch512mp508-pmsm-foc-smo)).
 
 ### 2.2	Software Tools Used for Testing the MATLAB/Simulink Model
 1.	MPLAB X IDE and IPE (v6.20)
@@ -84,10 +84,7 @@ This section describes hardware setup required for the demonstration.
     | main.slx   | Main Core Simulink Model  | 
     | secondary_pmsm_smo.slx   | Secondary Core Simulink Model | 
     | mcb_host_SMO.slx  | Simulink Model for Data Visualization |
-    |
-
-    
-
+        
 3.	<p style='text-align: justify;'>Follow the steps below to configure and build the secondary core model. This model contains the SMO based sensorless FOC algorithm.
 
     1. <p style='text-align: justify;'> Double click and open the .m file. This .m file contains the configuration parameter for the motor and board. By default, the .m file is configured to run Hurst 300 motor and MCLV-48V-300W Development board. Run the file by clicking the <b>“Run”</b> icon and wait till all variables gets loaded on the <b>‘Workspace’</b> tab.
@@ -166,7 +163,7 @@ This section describes hardware setup required for the demonstration.
         <p align="left">
         <img  src="images/dem18.png"></p>
        </p>
-    5. <p style='text-align: justify;'>To generate the code and run the motor, click on <b>‘Build’</b> option under the <b>“Microchip”</b> tab and in <b>'Build, Deploy & Start'</b> menu. This will generate the MPLAB X project from the Simulink model and program  both the cores of dsPIC33CH512MP508 device.
+    5. <p style='text-align: justify;'>To generate the code and run the motor, click on <b>‘Build’</b> option under the <b>“Microchip”</b> tab and in <b>'Build, Deploy & Start'</b> drop down. This will generate the MPLAB X project from the Simulink model and program  both the cores of dsPIC33CH512MP508 device.
 
         <p align="left">
         <img  src="images/dem17.png"></p>
@@ -178,11 +175,7 @@ This section describes hardware setup required for the demonstration.
        <img  src="images/dem19.png"></p>
         </p>
 
-5.	If the device is successfully programmed, <b>LED1 - LD1</b> will be blinking and the <b>LED2 - LD2</b> will be OFF.
-
-    <p align="left">
-      <img  src="images/led.png"></p>
-    </p>
+5.	If the device is successfully programmed, <b>LED1 - LD1</b> and <b>LED2 - LD2</b> will be blinking.
 
 6.	To Run the motor, press the push button <b>SW1</b>.
 
