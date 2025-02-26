@@ -1,4 +1,9 @@
-![image](images/microchip_logo_white_red.png) 
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="images/microchip_logo_white_red.png">
+	<source media="(prefers-color-scheme: light)" srcset="images/microchip_logo_black_red.png">
+    <img alt="Microchip Logo." src="images/microchip_logo_black_red.png">
+</picture> 
+
 # MATLAB/Simulink Model for Sensorless FOC with SMO and Field Weakening: MCLV-48V-300W Motor Control Development Board and dsPIC33CH512MP508 MC DIM 
 
 ## 1. INTRODUCTION
@@ -120,7 +125,7 @@ This section describes hardware setup required for the demonstration.
         <img  src="images/dem6.png"></p>
         </p>
 
-    6. To generate the code, click on <b>‘Build’</b> option under the <b>“Microchip”</b> tab and in <b>'Build, Deploy & Start'</b> menu. 
+    6. To generate the code, click on <b>‘Build’</b> option under the <b>“Microchip”</b> tab and <b>'Build, Deploy & Start'</b> drop down. 
 
         <p align="left">
         <img  src="images/dem7.png"></p>
@@ -163,7 +168,7 @@ This section describes hardware setup required for the demonstration.
         <p align="left">
         <img  src="images/dem18.png"></p>
        </p>
-    5. <p style='text-align: justify;'>To generate the code and run the motor, click on <b>‘Build’</b> option under the <b>“Microchip”</b> tab and in <b>'Build, Deploy & Start'</b> drop down. This will generate the MPLAB X project from the Simulink model and program  both the cores of dsPIC33CH512MP508 device.
+    5. <p style='text-align: justify;'>To generate the code and run the motor, click on <b>‘Build’</b> option under the <b>“Microchip”</b> tab and <b>'Build, Deploy & Start'</b> drop down. This will generate the MPLAB X project from the Simulink model and program  both the cores of dsPIC33CH512MP508 device.
 
         <p align="left">
         <img  src="images/dem17.png"></p>
@@ -189,7 +194,7 @@ This section describes hardware setup required for the demonstration.
       <img  src="images/potentiometer.png"></p>
     </p>
 
-13.	Press the push button <b>SW1</b> to stop the motor. Make sure motor is reduced minimum potentimeter value before stopping the motor.
+13.	Press the push button <b>SW1</b> to stop the motor. Make sure motor is reduced to minimum potentimeter value before stopping the motor.
 
     <p align="left">
       <img  src="images/pushbutton1.png"></p>
