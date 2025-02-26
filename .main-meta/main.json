@@ -6,7 +6,7 @@
       "name":"com.microchip.matlab.project.matlab-mclv48v300w-33ch512mp508-pmsm-foc-smo",
       "version":"1.0.0",
       "displayName":"MATLAB-Simulink model for Sensorless FOC with flux weakening control using Sliding mode observer (SMO)",
-      "projectName":"matlab-mclv-48v-300w-dspic33ch512mp508-foc-smo",
+      "projectName":"matlab-mclv48v300w-33ch512mp508-pmsm-foc-smo",
       "shortDescription":"MATLAB-Simulink model for Sensorless FOC with flux weakening control using Sliding mode observer (SMO) with MCLV-48V-300W Development Board and dsPIC33CH512MP508 MC DIM",
       "simulationTool":{
          "name":"MATLAB/Simulink",
@@ -41,6 +41,8 @@
       "keywords":[
          "Motor Control",
          "FOC",
+		 "Sensorless Control",
+		 "SMO",
          "ADC",
          "PWM"
       ]
